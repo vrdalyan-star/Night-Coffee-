@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Night Coffee</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="top-bar">
+
+   <p>
+        24H OPEN • FREE WIFI • FRESH BREAD • NIGHT WORKSPACE
+    </p>
+
+</section>
+
+<section class="hero">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>Night Coffee</h1>
+
+        <p>
+            24 hour cafe for coffee, bread, and unfinished dreams.
+        </p>
+        
+       
+       <div class="hero-menu">
+
+    <p>Explore Menu</p>
+
+    <div class="hero-buttons">
+
+        <button onclick="scrollToCoffee()">
+            Coffee
+        </button>
+
+        <button onclick="scrollToBread()">
+            Bread
+        </button>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- DRINK -->
+    <h2 class="title" id="coffee-section">
+    - Coffee -
+</h2>
+
+    <section class="menu-container">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800"
+                alt="coffee">
+
+            <div class="info">
+                <h3>Americano</h3>
+
+                <p>
+                    Strong black coffee for people surviving deadlines.
+                </p>
+
+                <span>Rp 18.000</span>
+            </div>
+
+            <div class="action">
+                <button onclick="minusItem('Americano',18000)">-</button>
+
+                <span id="Americano-count">0</span>
+
+                <button onclick="plusItem('Americano',18000)">+</button>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800"
+                alt="coffee">
+
+            <div class="info">
+                <h3>Latte</h3>
+
+                <p>
+                    Soft milk coffee for calmer nights.
+                </p>
+
+                <span>Rp 24.000</span>
+            </div>
+
+            <div class="action">
+                <button onclick="minusItem('Latte',24000)">-</button>
+
+                <span id="Latte-count">0</span>
+
+                <button onclick="plusItem('Latte',24000)">+</button>
+            </div>
+</div>
+           <div class="card">
+
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800">
+
+    <div class="info">
+
+        <h3>Caramel Latte</h3>
+
+        <p>
+            Sweet coffee for slower midnight hours.
+        </p>
+
+        <span>Rp 32.000</span>
+
+    </div>
+
+    <div class="action">
+
+        <button onclick="minusItem('Caramel Latte',32000)">-</button>
+
+        <span id="Caramel Latte-count">0</span>
+
+        <button onclick="plusItem('Caramel Latte',32000)">+</button>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- FOOD -->
+    <h2 class="title" id="bread-section">
+    - Bread -
+</h2>
+
+    <section class="menu-container">
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800"
+                alt="bread">
+
+            <div class="info">
+                <h3>Butter Croissant</h3>
+
+                <p>
+                    Warm bread for long midnight conversations.
+                </p>
+
+                <span>Rp 15.000</span>
+            </div>
+
+            <div class="action">
+                <button onclick="minusItem('Croissant',15000)">-</button>
+
+                <span id="Croissant-count">0</span>
+
+                <button onclick="plusItem('Croissant',15000)">+</button>
+            </div>
+
+        </div>
+        
+        <div class="card">
+
+    <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=800">
+
+    <div class="info">
+
+        <h3>Strawberry Toast</h3>
+
+        <p>
+            Crispy toast with sweet strawberry jam.
+        </p>
+
+        <span>Rp 21.000</span>
+
+    </div>
+
+    <div class="action">
+
+        <button onclick="minusItem('Strawberry Toast',21000)">
+            -
+        </button>
+
+        <span id="Strawberry Toast-count">
+            0
+        </span>
+
+        <button onclick="plusItem('Strawberry Toast',21000)">
+            +
+        </button>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- CART -->
+    <section class="cart">
+
+        <h2>Your Order</h2>
+
+        <div id="order-list"></div>
+
+        <h3 id="total">
+            Total : Rp 0
+        </h3>
+        
+        <button class="order-btn" onclick="openForm()">
+    Order
+</button>
+        
+       
+    </section>
+
+<div class="popup" id="popup"
+onclick="closePopup(event)">
+
+   <div class="popup-content"
+onclick="event.stopPropagation()">
+
+        <h2>Complete Order</h2>
+
+        <input type="text" id="name"
+placeholder="Your Name *">
+
+<select id="payment">
+
+    <option value="">
+        Payment Method *
+    </option>
+
+    <option>
+        Cash
+    </option>
+
+    <option>
+        Online Payment
+    </option>
+
+</select>
+
+        <button onclick="submitOrder()">
+            Submit Order
+        </button>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
